@@ -1,0 +1,58 @@
+export const CLIMATE_OPTIONS = ["Ensolarado", "Parcialmente nublado", "Nublado/Claro", "Chuvoso", "Tempestade"] as const
+
+export const MOCK_RDOS = [
+  {
+    id: "rdo-169",
+    number: "169",
+    date: "29/02/2024",
+    description: "Execução de superestrutura, alvenaria",
+    climate: "Nublado/Claro",
+    teamSize: 6,
+    pdfUrl: "/pdfs/rdo-169.pdf",
+  },
+  {
+    id: "rdo-168",
+    number: "168",
+    date: "28/02/2024",
+    description: "Montagem de lajes pré-fabricadas",
+    climate: "Ensolarado",
+    teamSize: 5,
+    pdfUrl: "/pdfs/rdo-168.pdf",
+  },
+  {
+    id: "rdo-167",
+    number: "167",
+    date: "27/02/2024",
+    description: "Concretagem da estrutura",
+    climate: "Parcialmente nublado",
+    teamSize: 8,
+    pdfUrl: "/pdfs/rdo-167.pdf",
+  },
+  {
+    id: "rdo-166",
+    number: "166",
+    date: "26/02/2024",
+    description: "Preparação de armaduras e formas",
+    climate: "Ensolarado",
+    teamSize: 7,
+    pdfUrl: "/pdfs/rdo-166.pdf",
+  },
+  {
+    id: "rdo-165",
+    number: "165",
+    date: "25/02/2024",
+    description: "Instalações elétricas e hidráulicas",
+    climate: "Chuvoso",
+    teamSize: 4,
+    pdfUrl: "/pdfs/rdo-165.pdf",
+  },
+  {
+    id: "rdo-164",
+    number: "164",
+    date: "24/02/2024",
+    description: "Acabamentos internos e pintura",
+    climate: "Parcialmente nublado",
+    teamSize: 6,
+    pdfUrl: "/pdfs/rdo-164.pdf",
+  },
+] as const

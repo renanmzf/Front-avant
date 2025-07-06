@@ -1,0 +1,182 @@
+"use client"
+
+// Comprehensive Work Breakdown Structure for Construction Projects
+export const constructionWBS = {
+  phases: [
+    {
+      id: "projetos-aprovacoes",
+      name: "Projetos e aprovações",
+      color: "bg-blue-50 border-blue-200 text-blue-800",
+      subPhases: [
+        "Projeto arquitetônico",
+        "Projeto estrutural",
+        "Projeto elétrico",
+        "Projeto hidráulico",
+        "Aprovações legais",
+      ],
+    },
+    {
+      id: "canteiro-obras",
+      name: "Canteiro de obras",
+      color: "bg-orange-50 border-orange-200 text-orange-800",
+      subPhases: [
+        "Instalações temporárias (banheiros, contêineres)",
+        "Segurança (EPIs, sinalização, tapumes)",
+        "Limpeza e organização",
+      ],
+    },
+    {
+      id: "fundacoes",
+      name: "Fundações",
+      color: "bg-amber-50 border-amber-200 text-amber-800",
+      subPhases: ["Escavação", "Baldrame", "Sapatas", "Estacas", "Radier", "Impermeabilização de fundações"],
+    },
+    {
+      id: "estrutura",
+      name: "Estrutura",
+      color: "bg-gray-50 border-gray-200 text-gray-800",
+      subPhases: ["Ferragem", "Concreto", "Formas", "Estrutura metálica", "Impermeabilização"],
+    },
+    {
+      id: "alvenarias-reboco",
+      name: "Alvenarias e Reboco",
+      color: "bg-red-50 border-red-200 text-red-800",
+      subPhases: ["Alvenaria estrutural", "Alvenaria de vedação", "Chapisco", "Emboço", "Reboco", "Contrapiso"],
+    },
+    {
+      id: "telhado-forro",
+      name: "Telhado e forro",
+      color: "bg-yellow-50 border-yellow-200 text-yellow-800",
+      subPhases: ["Estrutura do telhado", "Telhas", "Calhas e rufos", "Forro", "Isolamento térmico/acústico"],
+    },
+    {
+      id: "instalacoes-hidraulicas",
+      name: "Instalações hidráulicas",
+      color: "bg-cyan-50 border-cyan-200 text-cyan-800",
+      subPhases: [
+        "Tubulações",
+        "Conexões e registros",
+        "Caixa d'água e bombas",
+        "Instalação de louças e metais",
+        "Testes e vistoria",
+      ],
+    },
+    {
+      id: "instalacoes-eletricas",
+      name: "Instalações elétricas",
+      color: "bg-purple-50 border-purple-200 text-purple-800",
+      subPhases: [
+        "Quadros de distribuição",
+        "Fios e cabos",
+        "Tomadas e interruptores",
+        "Iluminação",
+        "Sistemas de aterramento",
+        "Instalação de painéis solares",
+      ],
+    },
+    {
+      id: "instalacoes-complementares",
+      name: "Instalações complementares",
+      color: "bg-indigo-50 border-indigo-200 text-indigo-800",
+      subPhases: ["Gás", "Ar-condicionado", "Sistemas de segurança", "Automação residencial"],
+    },
+    {
+      id: "revestimento-piso-parede",
+      name: "Revestimento piso e parede",
+      color: "bg-green-50 border-green-200 text-green-800",
+      subPhases: ["Pisos", "Paredes", "Rejunte", "Argamassa colante", "Regularização de piso"],
+    },
+    {
+      id: "portas-janelas-vidros",
+      name: "Portas janelas e vidros",
+      color: "bg-teal-50 border-teal-200 text-teal-800",
+      subPhases: ["Portas", "Janelas", "Vidros", "Ferragens"],
+    },
+    {
+      id: "pintura-interna-externa",
+      name: "Pintura interna e externa",
+      color: "bg-pink-50 border-pink-200 text-pink-800",
+      subPhases: ["Preparação de superfícies", "Tintas", "Texturas e efeitos", "Pintura externa"],
+    },
+    {
+      id: "bancadas-loucas-metais",
+      name: "Bancadas louças e metais",
+      color: "bg-rose-50 border-rose-200 text-rose-800",
+      subPhases: ["Bancadas", "Louças", "Metais", "Instalação e ajustes"],
+    },
+    {
+      id: "servicos-complementares",
+      name: "Serviços complementares",
+      color: "bg-lime-50 border-lime-200 text-lime-800",
+      subPhases: [
+        "Paisagismo",
+        "Limpeza pós-obra",
+        "Vistoria final e ajustes",
+        "Entrega e documentação",
+        "Piscina",
+        "Muro de divisa",
+        "Muro de arrimo",
+        "Infraestrutura",
+        "Superestrutura",
+        "Preparativos iniciais",
+        "Esquadrias",
+        "Cobertura",
+      ],
+    },
+    {
+      id: "mao-obra",
+      name: "Mão de obra",
+      color: "bg-violet-50 border-violet-200 text-violet-800",
+      subPhases: ["Etapa cinza", "Etapa acabamento", "Assentamento de revestimento", "Contrapiso"],
+    },
+    {
+      id: "administracao",
+      name: "Administração",
+      color: "bg-slate-50 border-slate-200 text-slate-800",
+      subPhases: ["Administração de obra"],
+    },
+  ],
+
+  classes: [
+    "Concreto",
+    "Arame e pregos",
+    "Ferramentas",
+    "Aço",
+    "Madeira",
+    "Cerâmica",
+    "Hidráulica",
+    "Elétrica",
+    "Tintas e vernizes",
+    "Impermeabilizantes",
+    "Isolantes",
+    "Vidros",
+    "Metais sanitários",
+    "Louças sanitárias",
+    "Revestimentos",
+    "Esquadrias",
+    "Telhas",
+    "Equipamentos",
+    "Mão de obra especializada",
+    "Mão de obra comum",
+    "Transporte",
+    "Aluguel de equipamentos",
+    "Serviços terceirizados",
+  ],
+
+  types: [
+    "Material",
+    "Mão de obra",
+    "Equipamento",
+    "Serviço",
+    "Transporte",
+    "Aluguel",
+    "Consultoria",
+    "Licenças",
+    "Taxas",
+    "Outros",
+  ],
+}
+
+export type ConstructionPhase = (typeof constructionWBS.phases)[0]
+export type ConstructionClass = (typeof constructionWBS.classes)[0]
+export type ConstructionType = (typeof constructionWBS.types)[0]
