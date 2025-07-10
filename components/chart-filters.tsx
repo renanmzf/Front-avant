@@ -2,7 +2,7 @@
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { FILTER_PERIODS, MONTHS } from "../constants/cost-analysis"
-import type { ChartFilters as CostAnalysisFilters } from "../types/cost-analysis"
+import type { ChartFiltersType as CostAnalysisFilters } from "../types/cost-analysis"
 import type { FilterPeriod } from "../types/cost-analysis"
 
 interface ChartFiltersProps {

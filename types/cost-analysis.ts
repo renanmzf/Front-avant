@@ -35,16 +35,29 @@ export interface ExpenseEntry {
     class: string;
     type: CostType;
     paymentMethod: PaymentMethod;
-    admPercentage: number; // Changed from adm string to percentage number
+    adm: string;
     value: number;
 }
 
+// Add new interface for administration expenses
+export interface AdministrationExpense {
+    id: string;
+    year: number;
+    month: string;
+    monthNumber: number;
+    value: number;
+    description: string;
+}
+
+// Update CostAnalysisData interface
 export interface CostAnalysisData {
     costDistribution: CostDistribution[];
     expenseStages: ExpenseStage[];
+    administrationExpenses: AdministrationExpense[];
     expenseEntries: ExpenseEntry[];
     totalCostDistribution: number;
     totalExpenseStages: number;
+    totalAdministrationExpenses: number;
 }
 
 export interface CostAnalysisProps {
@@ -62,10 +75,14 @@ export interface TableFilters {
     valueRange: { min: number; max: number };
 }
 
-export interface ChartFilters {
+export interface ChartFiltersType {
     period: FilterPeriod;
     month: number;
     year: number;
 }
 
-export type TabType = 'cost-distribution' | 'stage-expenses';
+// Update the TabType to include the new administration tab
+export type TabType =
+    | 'administration-expenses'
+    | 'cost-distribution'
+    | 'stage-expenses';

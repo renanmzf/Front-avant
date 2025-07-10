@@ -234,7 +234,11 @@ export default function ClientePage() {
         { name: 'Administração', progress: 45, status: 'in-progress' },
         { name: 'Projetos e aprovações', progress: 45, status: 'in-progress' },
         { name: 'Telhado e forro', progress: 45, status: 'in-progress' },
-        { name: 'Portas, janelas e vidros', progress: 45, status: 'in-progress' },
+        {
+            name: 'Portas, janelas e vidros',
+            progress: 45,
+            status: 'in-progress',
+        },
         { name: 'Instalação hidáulica', progress: 45, status: 'in-progress' },
         { name: 'Instalação Elétrica', progress: 45, status: 'in-progress' },
         { name: 'Serviços preliminares', progress: 45, status: 'in-progress' },
@@ -614,7 +618,7 @@ export default function ClientePage() {
                                                 </BarChart>
                                             </ResponsiveContainer>
                                         </div>
-                                        <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                                        <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
                                             <div className="p-3 bg-green-50 rounded-lg">
                                                 <p className="text-sm text-gray-600">
                                                     Total Investido
@@ -653,7 +657,6 @@ export default function ClientePage() {
                                         </CardTitle>
                                     </CardHeader>
 
-                                    
                                     <CardContent>
                                         {/* Container com scroll - altura máxima definida */}
                                         <div className="space-y-6 max-h-80 overflow-y-auto pr-2">
@@ -688,6 +691,7 @@ export default function ClientePage() {
                                                     <Slider
                                                         value={[phase.progress]}
                                                         min={0}
+                                                        disabled
                                                         max={100}
                                                         step={1}
                                                         onValueChange={(
@@ -830,22 +834,11 @@ export default function ClientePage() {
                             </div>
                         )}
 
-
-                         {activeTab === 'planning' && (
+                        {activeTab === 'planning' && (
                             <div className="space-y-6">
-                                <h1 className="text-2xl font-bold text-gray-900">
-                                    Planejamento
-                                </h1>
-                                <PlanningManagement/>
+                                <PlanningManagement />
                             </div>
                         )}
-
-
-
-
-
-
-
 
                         {activeTab === 'contratos' && (
                             <div className="space-y-6">
@@ -886,8 +879,7 @@ export default function ClientePage() {
 
                         {activeTab === 'dados-obra' && (
                             <div className="space-y-6">
-                               
-                                <ConstructionDisplay/>
+                                <ConstructionDisplay />
                             </div>
                         )}
 
@@ -898,9 +890,8 @@ export default function ClientePage() {
                                 </h1>
 
                                 <Card>
-                                    
                                     <CardContent>
-                                        <RDOVisualizationScreen/>
+                                        <RDOVisualizationScreen />
                                     </CardContent>
                                 </Card>
                             </div>

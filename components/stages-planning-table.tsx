@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { STAGE_STATUS_OPTIONS } from "../constants/planning-constants"
 import type { ProjectStage } from "../types/planning"
+import { usePathname } from "next/navigation"
 
 interface StagesPlanningTableProps {
   stages: ProjectStage[]
@@ -21,6 +22,10 @@ export const StagesPlanningTable = ({ stages, onAddExecution, onViewDetails }: S
       currency: "BRL",
     }).format(value)
   }
+
+  const pathname = usePathname();
+      
+  const showCard = !pathname.startsWith('/cliente');
 
   const getStatusConfig = (status: string) => {
     return STAGE_STATUS_OPTIONS.find((s) => s.value === status) || STAGE_STATUS_OPTIONS[0]
@@ -99,6 +104,7 @@ export const StagesPlanningTable = ({ stages, onAddExecution, onViewDetails }: S
                     </TableCell>
                     <TableCell>
                       <div className="flex items-center justify-center gap-1">
+                        {showCard && (
                         <Button
                           variant="outline"
                           size="sm"
@@ -108,6 +114,7 @@ export const StagesPlanningTable = ({ stages, onAddExecution, onViewDetails }: S
                         >
                           <Plus className="h-3 w-3" />
                         </Button>
+                        )}
                         <Button
                           variant="outline"
                           size="sm"

@@ -10,7 +10,9 @@ interface TabNavigationProps {
 }
 
 export const TabNavigation = ({ activeTab, onTabChange, className = "" }: TabNavigationProps) => {
+  // Update the tabs array to match the new order
   const tabs = [
+    { id: "administration-expenses" as TabType, label: "Gasto com Administração" },
     { id: "cost-distribution" as TabType, label: "Distribuição por Tipo de Custo" },
     { id: "stage-expenses" as TabType, label: "Gastos por Etapa" },
   ]

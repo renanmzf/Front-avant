@@ -7,6 +7,7 @@ import { StagesPlanningTable } from './stages-planning-table';
 import { CreateStageForm } from './create-stage-form';
 import { CreateExecutionForm } from './create-execution-form';
 import { usePlanningManagement } from '../hooks/use-planning-management';
+import { usePathname } from 'next/navigation';
 
 export default function PlanningManagement() {
     const {
@@ -21,6 +22,10 @@ export default function PlanningManagement() {
         createStage,
         createExecution,
     } = usePlanningManagement();
+
+    const pathname = usePathname();
+    
+    const showCard = !pathname.startsWith('/cliente');
 
     const handleAddExecution = (stageId: string) => {
         executionForm.setValue('stageId', stageId);
@@ -50,6 +55,7 @@ export default function PlanningManagement() {
                             📋 {planningData.projectName}
                         </p>
                     </div>
+                    {showCard && (
                     <div className="flex flex-col sm:flex-row gap-2">
                         <Button
                             onClick={() => setShowCreateStage(true)}
@@ -67,6 +73,7 @@ export default function PlanningManagement() {
                             Novo Lançamento
                         </Button>
                     </div>
+                    )}
                 </div>
             </div>
 
